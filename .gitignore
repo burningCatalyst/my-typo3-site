@@ -10,3 +10,4 @@ nbproject
 /public/typo3conf/*
 !/public/typo3conf/LocalConfiguration.php
 !/public/typo3conf/AdditionalConfiguration.php
+!/public/typo3conf/ext/site_thenetcodeconflict/*
