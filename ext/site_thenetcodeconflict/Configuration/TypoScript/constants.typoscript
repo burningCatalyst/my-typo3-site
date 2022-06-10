@@ -1,3 +1,5 @@
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+
 # page
 page.templates {
     layoutRootPath = EXT:site_thenetcodeconflict/Resources/Private/Layouts/Page/
