@@ -1,0 +1,15 @@
+<article class="post">
+    <f:if condition="{data.header}">
+        <header>
+        <div class="title">
+            <h2>{data.header}</h2>
+        </div>
+        </header>
+    </f:if>
+    <f:render section="Main" optional="true" />
+    <footer>
+        <f:render section="Footer" optional="true">
+            <f:render partial="Footer/All" arguments="{_all}" />
+        </f:render>
+    </footer>
+ </article>
