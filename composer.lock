@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90f86c7bae8fe53c531a2f26b78af5ef",
+    "content-hash": "18f9a33cded978c9acb027ed57591e1d",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -7211,6 +7211,38 @@
             "time": "2021-09-20T19:19:13+00:00"
         },
         {
+            "name": "typo3/site_thenetcodeconflict",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "public/typo3conf/ext/site_thenetcodeconflict",
+                "reference": "ed19086ad5e9b8993305bb9a38e39554b0c37c28"
+            },
+            "require": {
+                "php": ">=7.2.0",
+                "typo3/cms-core": "*"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "Typo3\\ExampleExtension\\": "Classes"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Fabian Krenzel",
+                    "email": "info@mail.de"
+                }
+            ],
+            "description": "The Netcode Conflict Site Extension",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "typo3/symfony-psr-event-dispatcher-adapter",
             "version": "v2.1.0",
             "source": {
@@ -7357,9 +7389,11 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "typo3/site_thenetcodeconflict": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],

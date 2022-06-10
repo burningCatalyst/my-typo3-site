@@ -24,4 +24,20 @@ page = PAGE
                     as = headerMenu
                 }
             } 
+            10.dataProcessing {
+             1 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+             1.as = site
+             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+             10 {
+                    levels = 1
+                    as = headerMenu
+                }
+             20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+             20 {
+                    special = directory
+                    # Replace 5 below with the page ID
+                    special.value = 5
+                    as = popoverMenu
+                }
+            }
         }

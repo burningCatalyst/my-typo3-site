@@ -1,0 +1,21 @@
+{
+    "name": "typo3/site_thenetcodeconflict",
+    "description": "The Netcode Conflict Site Extension",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Fabian Krenzel",
+            "email": "info@mail.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Typo3\\ExampleExtension\\": "Classes"
+        }
+    },
+    "require": {
+        "php": ">=7.2.0",
+        "typo3/cms-core": "*"
+    }
+}

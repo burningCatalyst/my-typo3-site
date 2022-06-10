@@ -56,3 +56,12 @@ to be used for development.
 ## License
 
 GPL-2.0 or later
+
+## Site Extension App installation
+
+* cd typo3conf/ext/site_thenetcodeconflict
+* ln -s ../../../ext/site_thenetcodeconflict .
+
+In the container:
+
+* composer require typo3/site_thenetcodeconflict:@dev 

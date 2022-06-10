@@ -15,7 +15,7 @@
 	"repositories": [
 		{
 			"type": "path",
-			"url": "public/typo3conf/ext/site_thenetcodeconflict"
+			"url": "public/typo3conf/ext/*"
 		}
 	],
 	"require": {
@@ -44,7 +44,8 @@
 		"typo3/cms-sys-note": "^11.5.0",
 		"typo3/cms-t3editor": "^11.5.0",
 		"typo3/cms-tstemplate": "^11.5.0",
-		"typo3/cms-viewpage": "^11.5.0"
+		"typo3/cms-viewpage": "^11.5.0",
+		"typo3/site_thenetcodeconflict": "@dev"
 	},
 	"scripts":{
 		"typo3-cms-scripts": [
@@ -53,5 +54,7 @@
 		"post-autoload-dump": [
 			"@typo3-cms-scripts"
 		]
-	}
+	},
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
