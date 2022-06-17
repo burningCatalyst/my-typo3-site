@@ -70,6 +70,6 @@ GPL-2.0 or later
 * cd my-typo3-site/public/typo3conf/ext/
 * ln -s ../../../ext/site_thenetcodeconflict .
 
-In the container:
+Install / Activate:
 
-* composer require typo3/site_thenetcodeconflict:@dev 
+* ddev composer require typo3/site_thenetcodeconflict:@dev 
