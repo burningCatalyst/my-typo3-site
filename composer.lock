@@ -7216,7 +7216,7 @@
             "dist": {
                 "type": "path",
                 "url": "public/typo3conf/ext/site_thenetcodeconflict",
-                "reference": "ed19086ad5e9b8993305bb9a38e39554b0c37c28"
+                "reference": "c58b88e0fde4838223fb0968ea6d4974705cdea1"
             },
             "require": {
                 "php": ">=7.2.0",
