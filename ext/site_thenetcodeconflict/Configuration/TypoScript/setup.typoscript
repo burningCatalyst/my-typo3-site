@@ -41,5 +41,19 @@ page = PAGE
                     special.value = 5
                     as = popoverMenu
                 }
+                30 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+                30.as = languageMenu
+            }
+            tt_content.bookquote =< lib.contentElement
+            tt_content.bookquote {
+                templateName = Bookquote
+                dataProcessing {
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    10 {
+                        references.fieldName = assets
+                        special.value = 5
+                        as = assets
+                    } 
+                }
             }
         }

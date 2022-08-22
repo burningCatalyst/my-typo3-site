@@ -1,9 +1,9 @@
 <?php
 return [
     'BE' => [
-        'debug' => false,
+        'debug' => true,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$ZGZER2RhclJMdkdyQW5lbA$dW02PZ2wTbgBJhfV3e4iOXbBKBIfSa4jk41Bpv/0k3g',
+        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$TU1sclpZN0xwbmEvS3dteQ$gpBALmJ0f3BWIzAo5Rb51QYSDj348dnrx/1qrn54VfE',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -12,8 +12,17 @@ return [
     'DB' => [
         'Connections' => [
             'Default' => [
-                'charset' => 'utf8',
+                'charset' => 'utf8mb4',
+                'dbname' => 'db',
                 'driver' => 'mysqli',
+                'host' => 'ddev-my-typo3-site-db',
+                'password' => 'root',
+                'port' => 3306,
+                'tableoptions' => [
+                    'charset' => 'utf8mb4',
+                    'collate' => 'utf8mb4_unicode_ci',
+                ],
+                'user' => 'root',
             ],
         ],
     ],
@@ -34,41 +43,20 @@ return [
             'loginLogo' => '',
             'loginLogoAlt' => '',
         ],
-        'bootstrap_package' => [
-            'disableCssProcessing' => '0',
-            'disableGoogleFontCaching' => '0',
-            'disablePageTsBackendLayouts' => '0',
-            'disablePageTsContentElements' => '0',
-            'disablePageTsRTE' => '0',
-            'disablePageTsTCADefaults' => '0',
-            'disablePageTsTCEFORM' => '0',
-            'disablePageTsTCEMAIN' => '0',
-        ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
-        'indexed_search' => [
-            'catdoc' => '/usr/bin/',
+        'flux' => [
+            'autoload' => '1',
             'debugMode' => '0',
-            'deleteFromIndexAfterEditing' => '1',
-            'disableFrontendIndexing' => '0',
-            'enableMetaphoneSearch' => '1',
-            'flagBitMask' => '192',
-            'fullTextDataLength' => '0',
-            'ignoreExtensions' => '',
-            'indexExternalURLs' => '0',
-            'maxAge' => '0',
-            'maxExternalFiles' => '5',
-            'minAge' => '24',
-            'pdf_mode' => '20',
-            'pdftools' => '/usr/bin/',
-            'ppthtml' => '/usr/bin/',
-            'unrtf' => '/usr/bin/',
-            'unzip' => '/usr/bin/',
-            'useCrawlerForExternalFiles' => '0',
-            'useMysqlFulltext' => '0',
-            'xlhtml' => '/usr/bin/',
+            'doktypes' => '0,1,4',
+            'flexFormToIrre' => '0',
+            'handleErrors' => '0',
+            'pageIntegration' => '1',
+            'pagesLanguageConfigurationOverlay' => '0',
+            'plugAndPlay' => '0',
+            'plugAndPlayDirectory' => 'design',
         ],
         'news' => [
             'advancedMediaPreview' => '1',
@@ -91,7 +79,7 @@ return [
         ],
     ],
     'FE' => [
-        'debug' => false,
+        'debug' => true,
         'disableNoCacheParameter' => true,
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
@@ -114,7 +102,7 @@ return [
                     'writerConfiguration' => [
                         'notice' => [
                             'TYPO3\CMS\Core\Log\Writer\FileWriter' => [
-                                'disabled' => true,
+                                'disabled' => false,
                             ],
                         ],
                     ],
@@ -162,10 +150,11 @@ return [
                 ],
             ],
         ],
-        'devIPmask' => '',
+        'debug' => true,
+        'devIPmask' => '*',
         'displayErrors' => 1,
         'encryptionKey' => '10467da41e13e7070ac7410f44cb794522c05636689cb3aa81ea7e31c5b29fd9ecba83dd468a812ba27be02fcd76b66e',
-        'exceptionalErrors' => 4096,
+        'exceptionalErrors' => 12290,
         'features' => [
             'unifiedPageTranslationHandling' => true,
             'yamlImportsFollowDeclarationOrder' => true,
@@ -174,5 +163,6 @@ return [
         'systemMaintainers' => [
             1,
         ],
+        'trustedHostsPattern' => '.*',
     ],
 ];

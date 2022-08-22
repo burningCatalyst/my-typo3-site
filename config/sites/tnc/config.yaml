@@ -1,0 +1,31 @@
+base: /
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-us
+    direction: ltr
+    flag: us
+  -
+    title: Spanish
+    enabled: true
+    base: /es/
+    typo3Language: es
+    locale: es_ES
+    iso-639-1: es
+    websiteTitle: 'Netcode de Conflict'
+    navigationTitle: Espanol
+    hreflang: es
+    direction: ''
+    fallbackType: strict
+    fallbacks: ''
+    flag: global
+    languageId: 1
+rootPageId: 1
+websiteTitle: 'The Netcode Conflict'

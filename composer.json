@@ -15,10 +15,14 @@
 	"repositories": [
 		{
 			"type": "path",
-			"url": "public/typo3conf/ext/*"
+			"url": "public/typo3conf/ext/*",
+			"options": {
+				"symlink": true
+			  }
 		}
 	],
 	"require": {
+		"georgringer/news": "^9.4",
 		"helhum/typo3-console": "^7.0.2",
 		"typo3/cms-backend": "^11.5.0",
 		"typo3/cms-belog": "^11.5.0",
@@ -29,14 +33,13 @@
 		"typo3/cms-extensionmanager": "^11.5.0",
 		"typo3/cms-felogin": "^11.5.0",
 		"typo3/cms-filelist": "^11.5.0",
-		"typo3/cms-fluid": "^11.5.0",
-		"typo3/cms-fluid-styled-content": "^11.5.0",
+		"typo3/cms-fluid": "^11.5",
+		"typo3/cms-fluid-styled-content": "^11.5",
 		"typo3/cms-form": "^11.5.0",
 		"typo3/cms-frontend": "^11.5.0",
 		"typo3/cms-impexp": "^11.5.0",
 		"typo3/cms-info": "^11.5.0",
 		"typo3/cms-install": "^11.5.0",
-		"typo3/cms-introduction": "^4.4",
 		"typo3/cms-recordlist": "^11.5.0",
 		"typo3/cms-rte-ckeditor": "^11.5.0",
 		"typo3/cms-seo": "^11.5.0",
@@ -45,8 +48,15 @@
 		"typo3/cms-t3editor": "^11.5.0",
 		"typo3/cms-tstemplate": "^11.5.0",
 		"typo3/cms-viewpage": "^11.5.0",
+		"typo3/promotionevents": "@dev",
 		"typo3/site_thenetcodeconflict": "@dev"
 	},
+	"autoload": {
+        "psr-4": {
+             "PromotionTourWebsite\\PromotionEvents\\":
+             "public/typo3conf/ext/promotionevents/Classes"
+        }
+    },
 	"scripts":{
 		"typo3-cms-scripts": [
 			"typo3cms install:fixfolderstructure"

@@ -9,16 +9,8 @@ Get going quickly with TYPO3 CMS.
 
 ## Quickstart
 
-```bash
-mkdir my-typo3-site
-cd my-typo3-site
-ddev config --project-type=typo3 --docroot=public --create-docroot
-ddev start
-ddev composer create "typo3/cms-base-distribution" --no-install
-ddev composer install
-ddev exec touch public/FIRST_INSTALL
-ddev launch
-```
+* `composer create-project typo3/cms-base-distribution project-name ^11`
+* `cd project-name`
 
 ### Setup
 
@@ -64,12 +56,3 @@ to be used for development.
 ## License
 
 GPL-2.0 or later
-
-## Site Extension App installation
-
-* cd my-typo3-site/public/typo3conf/ext/
-* ln -s ../../../ext/site_thenetcodeconflict .
-
-Install / Activate:
-
-* ddev composer require typo3/site_thenetcodeconflict:@dev 

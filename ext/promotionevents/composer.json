@@ -1,6 +1,6 @@
 {
-    "name": "typo3/site_thenetcodeconflict",
-    "description": "The Netcode Conflict Site Extension",
+    "name": "typo3/promotionevents",
+    "description": "Manage upcoming events and display them on your website",
     "type": "typo3-cms-extension",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -11,7 +11,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Typo3\\ExampleExtension\\": "Classes"
+             "PromotionTourWebsite\\PromotionEvents\\":
+             "public/typo3conf/ext/promotionevents/Classes"
         }
     },
     "require": {
@@ -20,7 +21,7 @@
     },
     "extra": {
         "typo3/cms": {
-            "extension-key": "site_thenetcodeconflict"
+            "extension-key": "promotionevents"
         }
     }
 }

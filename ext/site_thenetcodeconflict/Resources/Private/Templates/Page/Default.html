@@ -58,6 +58,15 @@
 									<li><a href="#" class="button large fit">Log In</a></li>
 								</ul>
 							</section>
+							<section>
+								<ul class="actions stacked">
+									<f:for each="{languageMenu}" as="menuItem">
+										<f:if condition="{menuItem.active} == 0">
+											<li><a href="{menuItem.link}" class="button large fit">Switch to {menuItem.navigationTitle}</a></li>
+										</f:if>
+									</f:for>
+								</ul>
+							</section>
 
 					</section>
 
